@@ -36,9 +36,15 @@ print("Passing students", pass_count)
 print("Failing students", fail_count)
 
 #student scores graph
-df.plot(x="Grade", y="Score", kind="bar", title="Student Scores")
+df.plot(x="Name",
+        y="Score",
+        kind="bar",
+        title="Student Scores",
+        legend=False)
+plt.tight_layout()
 plt.show()
 
 #grade distribution graph
 df["Grade"].value_counts().plot(kind="bar", title="Grade Distribution")
+plt.tight_layout()
 plt.show()
